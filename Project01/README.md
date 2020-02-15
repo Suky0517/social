@@ -8,9 +8,9 @@ After that, use **./CS1XA3.Project/prject_analyze** to execute the script
 It will display some insturctions for what argument does it need to implement some features
 Different arugment will lead to their corresponding features, so be careful
 Here are the list of all possible arguments 
->1 
->2 
->3 
+1 
+2 
+3 
 >Will be more here
 
 ## Feature 01 FIXME Log 
