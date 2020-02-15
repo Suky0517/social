@@ -25,15 +25,15 @@ Here are the list of all possible arguments
 file to the smallest file
 - Excution: excute this feature by inputing argument 2
 - Reference: some code was taken from 
-1. [course_web ] (mac1xa3.ca)
-2. [ stackexchange ] (unix.stackexchange.com/questions/53737)
+1. [course_web ] (http://mac1xa3.ca)
+2. [ stackexchange ] (http:/?unix.stackexchange.com/questions/53737)
 
 ## Feature 03 File Type Count
 - Description: this feature use the read command (with a prompt), prompt the user for an extension and output the number of files in my repo with the extension
 - Excution: excute this feature by input argument 3
 - Reference: some code was taken from 
-1. [ course_web ] (mac1xa3.ca)
-2. [ git_book ]  (git-scm.com/book/zh/v2)
+1. [ course_web ] (http://mac1xa3.ca)
+2. [ git_book ]  (http://git-scm.com/book/zh/v2)
 
 > **Feature 04** and ** feature 05** are to be implemented in part2
 
@@ -45,7 +45,7 @@ example, weather forecast and use calculator
 --- Calculator enable some simple calculation, also inform the user how to exit it.
 - Excution: excute this feature by input argument 6
 - Reference: some code was taken from
-1. [ course_web ] (mac1xa3.ca)
+1. [ course_web ] (http://mac1xa3.ca)
 > There probably will be more in the future
 
 ## Feature 07 Search for a word in file modified a certain time ago
@@ -59,5 +59,5 @@ exists), make all the files executable if the user wants.
 -- If the user want to see the serach file, show it.
 - Excution: excute this feature by input argument 7
 - Reference: some code was taken from
-1. [ course_web ] (mac1xa3.ca)
+1. [ course_web ] (http://mac1xa3.ca)
 > There probably will be more in the future.
