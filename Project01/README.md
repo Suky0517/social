@@ -25,8 +25,8 @@ Here are the list of all possible arguments
 file to the smallest file
 - Excution: excute this feature by inputing argument 2
 - Reference: some code was taken from 
-1. [course_web ] (http://mac1xa3.ca)
-2. [ stackexchange ] (http:/?unix.stackexchange.com/questions/53737)
+1. [ course_web ] (http://mac1xa3.ca)
+2. [ stackexchange ] (http://unix.stackexchange.com/questions/53737)
 
 ## Feature 03 File Type Count
 - Description: this feature use the read command (with a prompt), prompt the user for an extension and output the number of files in my repo with the extension
