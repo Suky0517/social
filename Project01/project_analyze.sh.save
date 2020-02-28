@@ -10,86 +10,32 @@ echo "Operate 'Search for a word in file modified a certain time ago', input 7"
 echo -n "Your choice is: "
 read var
 
-if [ "$var" -eq 5 ] ; then
-	echo "What do you want to do? Type 1 for Backup; type 2 for Restore"; read want
-	if [ "$want" -eq 1 ] ; then
-		if [ -d backup ] ; then
-			rm ./backup/*
-		else
-			mkdir backup
-		fi
-
-		touch restore.log
-		for file in `find -name *.tmp`
-		do
-			echo "$file" >> restore.log
-			cp "$file" ./backup
-			rm "$file"
-		done
-	fi
-
-	if [ "$want" -eq 2 ] ; then
-		if [ -f restore.log ] ; then
-			while IFS= read -r line
-			do
-				cp -r backup 
-			done < ./restore.log
-		fi
-	fi
-fi
-
 if [ "$var" -eq 4 ] ; then
-	if [ ! -f permissions.log ] ; then
+	if [ -f permissions.log ] ; then
+		rm permissions.log
+	else
 		touch permissions.log
 	fi
-
 	echo "What do you want to do? Type 1 for Change or type 2 for Restore"; read want
 	if [ "$want" -eq 1 ] ; then
-		if [ -f permissions.log ] ; then
-			rm permissions.log
-		else
-			touch permissions.log
-		fi
-
 		find ./ -name "*.sh" -print0 | while IFS= read -d '' file
 		do
-			ls -l "$file" >> permissions.log
-			ls -l "$file" | read str
-			if [ ! "${str[3]}" = w ] ; then
+			
+			echo ll "$file" | read str
+			if [ "${str[3]}" != w ] ; then
 				chmod u-x "$file"
 			else
 				chmod u+x "$file"
 			fi
-			if [ ! "${str[6]}" = w ] ; then
+			if [ "${str[6]}" != w ] ; then
 				chmod g-x "$file"
 			else
 				chmod g+x "$file"
 			fi
-			if [ ! "${str[9]}" = w ] ; then
+			if [ "${str[9]}" != w ] ; then
 				chmod o-x "$file"
 			else
 				chmod o+x "$file"
-			fi
-		done
-	fi
-	if [ "$want" -eq 2 ] ;then
-		for i in `find ./ -name *.sh`
-		do
-			cat permissions.log | grep "$i" | read str
-			if [ "${str[4]}" = x ] ; then
-				chmod u+x "$i"
-			else
-				chmod u-x "$i"
-			fi
-			if [ "${str[7]}" = x ] ; then
-				chmod g+x "$i"
-			else
-				chmod g-x "$i"
-			fi
-			if [ "${str[10]}" = x ] ; then
-				chmod o+x "$i"
-			else
-				chmod o-x "$i"
 			fi
 		done
 	fi
@@ -111,15 +57,12 @@ if [ "$var" -eq 7 ] ; then
 	fi
 	if [ "$search" -eq 1 ] ; then
 		find ./ -type f -mtime -"$search_time" -print0 | while IFS= read -d '' file
-		do
-			cat "$file" | grep "$word" >> search.txt
+		do 
+		cat "$file" | grep "$word" >> search.txt
 		done
 	fi
 	if [ "$search" -eq 2 ] ; then
-		find ./ -type f -name "*$word*" -mtime -"$search_time" | while IFS= read -d '' file
-		do
-			ls -l "$file" >> search.txt
-		done
+		find ./ -type f -name "*$word*" -mtime -"$search_time" >> search.txt
 	fi
 fi
 
@@ -163,4 +106,3 @@ if [ "$var" -eq 3 ] ; then
 	read extension
 	find -name "*.$extension" -ls | wc -l
 fi
-
