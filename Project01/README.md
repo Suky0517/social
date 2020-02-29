@@ -50,11 +50,11 @@ example, weather forecast and use calculator
 
 ## Feature 07 Search for a word in file modified a certain time ago
 - Description: this feature use the read command (with a prompt), prompt the user to choose whether to see all the lines in every file in the current directory 
-containg a specific word or all the files whose name has a specific word
-- First, ask the user to choose a word the user want to search and if the user want to search the files modified a certain time ago
+and subdirectory containg a specific word or all the files whose name has a specific word
+- First, ask the user to choose a word the user want to search and if the user want to search the files modified a certain time ago(By default, the time range is 30 days)
 - Ask the user if it want to search all the context in every file containing the word OR every file whose name containg the word
 -- If the user choose to see all the context, then write all the lines in all every files containing the word into serach.txt (overwrite it if ir already exist)
--- If the user choose to see all the file whose name containg the word, write all the files with their name, size, their path into search.txt(overwrite it if it 
+-- If the user choose to see all the file whose name containg the word, write all the files with their name, size, their path .etc into search.txt(overwrite it if it 
 exists), make all the files executable if the user wants.
 -- If the user want to see the serach file, show it.
 - Excution: excute this feature by input argument 7
