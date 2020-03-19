@@ -17,3 +17,4 @@ The html document used the following HTML Template from w3schools
 [https://www.w3schools.com/w3css/tryw3css_templates_parallax.htm](https://www.w3schools.com/w3css/tryw3css_templates_parallax.htm) 
 [https://mac1xa3.ca/](https://mac1xa3.ca/)
 [https://www.runoob.com/jquery/jquery-examples.html](https://www.runoob.com/jquery/jquery-examples.html)
+[https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_animate3](https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_animate3)

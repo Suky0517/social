@@ -11,15 +11,14 @@
 <!--To get the functions I wrote-->
 <script src="project02_js.js"></script>
 <!--Get the styles of the characters-->
-<style>
-  html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
-</style>
-<!--Make the backgroud color into grey-->
-<body class="w3-light-grey" style="background-image: url(photo2.jpg);">
+<link rel="stylesheet" href="project02.css">
+
+<!--Make the backgroud-->
+<body style="background-image: url('photo2.jpg')">
   <div class="bgimg-1 w3-center w3-display-container w3-opacity-min" id="home">
   </div>
   <div class="w3-top">
-  <div class="w3-bar w3-black w3-card">
+    <div class="w3-bar w3-green w3-card">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
     <a href="#summary" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SUMMARY</a>
@@ -27,10 +26,11 @@
     <a href="#courses" class="w3-bar-item w3-button w3-padding-large w3-hide-small">RELEVANT COURSES</a>
     <a href="#projects" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PROJECTS</a>
     <a href="#experience" class="w3-bar-item w3-button w3-padding-large w3-hide-small">EXPERIENCE</a>
+    </div>
   </div>
-</div>
+
 <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+<div id="navDemo" class="w3-bar-block w3-green w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
   <a href="#summary" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">SUMMARY</a>
   <a href="#education" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">EDUCATION</a>
   <a href="#courses" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">RELEVANT COURSES</a>
@@ -56,10 +56,10 @@
         <br>
         <div class="w3-container">
           <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>computer scientist</p>
-          <p><i class="fa fa-calendar fa-fw w3-margin-right w3-large w3-text-teal"></i>graduate in Apr 2023</p>
+          <p><i class="fa fa-calendar fa-fw w3-margin-right w3-large w3-text-teal"></i>expcted graduation date: Apr 2023</p>
           <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Mary E Keyes 209</p>
-          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>zhans174@mac1xa3.ca</p>
-          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>4372278960</p>
+          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i> <a href="mailto:zhans174@mcmaster.ca">zhans174@mcmaster.ca</a></p>
+          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>437-227-8960</p>
           <p><i class="fa fa-linkedin fa-fw w3-margin-right w3-large w3-text-teal"></i>
           <a style="color:lightgreen" href="https://www.linkedin.com/in/shuqi-zhang-9897671a1/"> click here</a></p>
           <hr>
@@ -104,37 +104,36 @@
       <!--Summary container-->
       <div class="w3-container w3-content w3-padding-32" style="max-width:800px" id="summary"></div>
       <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-star fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i><button class="sum">Summary</button></h2>
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-star fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i><button class="sum buttonn">Summary</button></h2>
         <p><sum>I am a first-year computer scientist student. Logic and solving problems are my favourite and best area. Additionally, my great snese of numbers makes me interested in business, too. I always work hard and do time-management very well so I hardly miss any deadline.</sum></p>
       <!--Summary container end-->
       </div>
       <!--education container-->
       <div class="w3-content" style="max-width:800px" id="education"></div>
         <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2 id ="p1" class="w3-text-grey w3-padding-6"><i class="fa fa-book fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
-        <p>hover your mouse here</p>
+        <h2 class="w3-text-grey w3-padding-6"><i class="fa fa-book fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
+        <p id ="edu">Click to show</p>
         <!--education container end-->
-        </div>      
+        </div>    
       <!--relavant courses container-->
       <div class="w3-content" style="max-width:800px" id="courses"></div>
         <div class="w3-container w3-card w3-white w3-margin-bottom">
         <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-asterisk fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Relavant courses and honors</h2>
         <p style="width:520px;height:20px;background-color:aquamarine;">Introduction to Computational Thinking  A+</p>
         <p style="width:520px;height:20px;background-color:aquamarine;">Engineering Mathematics  A+</p>
-        <button class="high">click me to show more in high school</button>
-        <br><br>
-        <div id="div1" style="width:520px;height:20px;display:none;background-color:aquamarine;">Mcmaster University entrance scholarship for high average 92+ in high school</div><br>
-        <div id="div2" style="width:520px;height:20px;display:none;background-color:aquamarine;">Euclid math competition certificate - Apr 2019</div><br>
-        <div id="div3" style="width:520px;height:20px;display:none;background-color:aquamarine;">Euclid math competition medal - Apr 2019</div><br>
+        <button class="high button w3-margin-bottom"><span>more in high school</span></button>
+        <div id="div1" class = "w3-margin-bottom" style="width:520px;height:20px;display:none;background-color:aquamarine;">Mcmaster University entrance scholarship for high average 92+ in high school</div>
+        <div id="div2" class = "w3-margin-bottom" style="width:520px;height:20px;display:none;background-color:aquamarine;">Euclid math competition certificate - Apr 2019</div>
+        <div id="div3" class = "w3-margin-bottom" style="width:520px;height:20px;display:none;background-color:aquamarine;">Euclid math competition medal - Apr 2019</div>
         </div>      
       <!--projects container-->
       <div class="w3-content" style="max-width:800px" id="projects"></div>
       <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-asterisk fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Projects</h2>
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-bars fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Projects</h2>
         <ul>
           <li>High school -- A math game like "guess a number" etc in java</li>
           <li>A bash script to do some operations on files in linux</li>
-          <li><button class="web"><divv>The website you are watching~~</divv></button></li>
+          <li><button class="web" style="border-radius: 50%" ><divv>The website you are watching~~</divv></button></li>
         </ul>
       </div>
       <!--experince container-->
@@ -180,6 +179,5 @@
 <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
     <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
 </footer>
-
 </body>
 </html>

@@ -1,10 +1,10 @@
 // When the mouse hover over the education text it shows the following message
 $(document).ready(function(){
-    $("#p1").mouseenter(function(){
-      alert('Mcmaster University - Halmiton');
-      alert('Bachelor of Applied science, Honors Computer scientist');
-    });
+  $("#edu").mousedown(function(){
+    alert("Mcmaster University - Halmiton");
+    alert("Bachelor of Applied science, Honors Computer scientist");
   });
+});
   
 // When the user clikcs on the button, it hides or shows
 $(document).ready(function(){
@@ -13,7 +13,7 @@ $(document).ready(function(){
     });
   });
 
-  // show more for the high school backgroud
+// show more for the high school backgroud
   $(document).ready(function(){
     $(".high").click(function(){
       $("#div1").fadeIn("fast");
@@ -21,6 +21,7 @@ $(document).ready(function(){
       $("#div3").fadeIn(4000);
     });
   });
+  
  // show something interesting -- block
   $(document).ready(function(){
     $(".web").click(function(){
