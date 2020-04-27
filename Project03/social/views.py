@@ -258,10 +258,10 @@ def friend_request_view(request):
         to_user_id = int(frID[3:])
         if request.user.is_authenticated:
             # TODO Objective 5: add new entry to FriendRequest
-            save_something = models.FriendRequest.objects.create(to_user = to_user_id, from_user = from_user_id)
+            save_something = models.FriendRequest.objects.create(to_user_id = to_user_id, from_user_id = from_user_id)
             save_something.save()
 
-            return HttpResponse(status='success')
+            return HttpResponse()
             # return HttpResponse()
         else:
             return redirect('login:login_view')
