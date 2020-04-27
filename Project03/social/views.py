@@ -255,7 +255,7 @@ def friend_request_view(request):
         # remove 'fr-' from frID
         print('C')
         from_user_id = user_info.user.id
-        to_user_id = int(frID[4:])
+        to_user_id = int(frID[3:])
         if request.user.is_authenticated:
             # TODO Objective 5: add new entry to FriendRequest
             save_something = models.FriendRequest.objects.create(to_user = to_user_id, from_user = from_user_id)
