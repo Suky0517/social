@@ -3,8 +3,15 @@
    ********************************************************************************************
    */
 function submitPost(event) {
-    alert('Post Button Pressed');
     // TODO Objective 8: send contents of post-text via AJAX Post to post_submit_view (reload page upon success)
+    let postContent = $("#post-text").html()
+    let json_data = { 'postContent' : postContent };
+    let url_path = post_submit_url;
+
+    // AJAX post
+    $.post(url_path,
+           json_data,
+           moreResponse);
 }
 
 /* ********************************************************************************************
@@ -12,8 +19,16 @@ function submitPost(event) {
    ********************************************************************************************
    */
 function submitLike(event) {
-    alert('Like Button Pressed');
     // TODO Objective 10: send post-n id via AJAX POST to like_view (reload page upon success)
+    // let ID = event.target.id;
+    let postID = event.target.id;
+    let json_data = { 'postID':postID };
+    let url_path = like_post_url;
+
+    // AJAX post
+    $.post(url_path,
+           json_data,
+           moreResponse);
 }
 
 /* ********************************************************************************************

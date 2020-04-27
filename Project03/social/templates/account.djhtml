@@ -3,24 +3,41 @@
 {% block title %}Account Page{% endblock %}
 
 {% block middle_column %}
+<form id = passwordchangeform method="post" action="{% url 'social:account_view' %}">
+    {% csrf_token %}
     <div class="w3-row-padding">
         <div class="w3-col m12">
             <div class="w3-card w3-round w3-white">
                 <div class="w3-container w3-padding">
-                    <h6 class="w3-opacity">Change Password</h6>
-                    <!--                     TODO Objective 3: Add Password Change Form -->
+                    {{ passwordForm }}
+                    <!--                                                                              TODO Objective 3: Add Password Change Form -->                    
+                    <input type="submit" value="Submit" />
                 </div>
             </div>
         </div>
     </div>
+</form>
+<form id = userinfochangeform method="post" action="{% url 'social:account_view' %}">
+    {% csrf_token %}
     <div class="w3-row-padding">
         <div class="w3-col m12">
             <div class="w3-card w3-round w3-white">
                 <div class="w3-container w3-padding">
-                    <h6 class="w3-opacity">Update Info</h6>
-                    <!--                     TODO Objective 3: Add User Info Update Forms -->
-                </div>
-            </div>
-        </div>
-    </div>
+                       <h6 class="w3-opacity">Update Info</h6>
+                       <h8 class="w3-opacity">new employment</h8>
+                       <input type='text' name = new_employment placeholder="" /><br></br>
+                       <h8 class="w3-opacity">new location</h8>
+                       <input type='text' name = new_location placeholder="" /><br></br>
+                       <h8 class="w3-opacity">new birthday</h8>
+                       <input type='date' name = new_birthday placeholder="" /><br></br>
+                       <h8 class="w3-opacity">interest 1</h8>
+                       <input type='text' name = interest1 placeholder="" /><br></br>
+                       <h8 class="w3-opacity">interest 2</h8>
+                       <input type='text' name = interest2 placeholder="" /><br></br>
+                       <input type='submit' value="Submit" />
+                </div>   
+             </div>
+         </div>
+     </div>
+</form>
 {% endblock %}
